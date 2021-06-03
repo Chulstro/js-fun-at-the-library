@@ -10,10 +10,18 @@ function buildMainCharacter(name, age, pronouns) {
   };
 }
 
+function saveReview(review, array) {
+  if (array.includes(review)) {
+    console.log("Review is already present")
+  } else {
+    return array.push(review)
+  }
+}
+
 module.exports = {
   createTitle,
   buildMainCharacter,
-  // saveReview,
+  saveReview,
   // calculatePageCount,
   // writeBook,
   // editBook
