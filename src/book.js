@@ -31,11 +31,16 @@ function writeBook(title, character, genre) {
   }
 }
 
+function editBook(bookObject) {
+  bookObject.pageCount = bookObject.pageCount * .75
+  return bookObject
+}
+
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
   calculatePageCount,
   writeBook,
-  // editBook
+  editBook
 }
