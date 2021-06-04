@@ -16,9 +16,14 @@ function listTitles(shelf) {
   return shelflist.toString().trim()
 }
 
+function searchShelf(shelf, title) {
+  titles = shelf.map(x => x.title)
+  return titles.includes(title)
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
