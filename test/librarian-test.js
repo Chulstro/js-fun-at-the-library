@@ -39,14 +39,14 @@ describe('Librarian (class)', function() {
     assert.deepEqual(librarian.library, library);
   });
 
-  it.skip('should be able to greet a library patron by name', function() {
+  it('should be able to greet a library patron by name', function() {
     var scott = new Librarian("Scott");
 
     assert.equal(scott.greetPatron("Will"), "Hello, Will!");
     assert.equal(scott.greetPatron("Tilly"), "Hello, Tilly!");
   });
 
-  it.skip('should greet a library patron differently if it is morning', function() {
+  it('should greet a library patron differently if it is morning', function() {
     var leta = new Librarian("Leta");
 
     assert.equal(leta.greetPatron("Scott"), "Hello, Scott!");
