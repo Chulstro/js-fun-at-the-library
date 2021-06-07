@@ -34,6 +34,10 @@ class Librarian {
       }
     }
   }
+
+  calculateLateFee(days) {
+    return Math.floor((days * .25)+1)
+  }
 }
 
 module.exports = Librarian;
