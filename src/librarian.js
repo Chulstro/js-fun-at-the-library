@@ -1,3 +1,7 @@
+var {
+  searchShelf
+}=require('./shelf')
+
 class Librarian {
   constructor(name, library) {
     this.name = name;
@@ -10,6 +14,19 @@ class Librarian {
     }
     else {
       return `Hello, ${patronName}!`
+    }
+  }
+
+  findBook(title) {
+    var shelves = Object.keys(this.library.shelves)
+    for (let i of shelves) {
+      if (searchShelf(this.library.shelves[i], title)) {
+        return `Yes, we have ${title}`
+        break
+      }
+      else if (i = shelves.length) {
+        return `Sorry, we do not have ${title}`
+      }
     }
   }
 }
