@@ -2,6 +2,10 @@ var {
   searchShelf
 }=require('./shelf')
 
+var {
+  checkoutBook
+}=require('./library')
+
 class Librarian {
   constructor(name, library) {
     this.name = name;
@@ -21,6 +25,7 @@ class Librarian {
     var shelves = Object.keys(this.library.shelves)
     for (let i of shelves) {
       if (searchShelf(this.library.shelves[i], title)) {
+        checkoutBook(this.library, title, i)
         return `Yes, we have ${title}`
         break
       }
